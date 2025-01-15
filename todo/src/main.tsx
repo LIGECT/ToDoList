@@ -1,11 +1,11 @@
-import classes from './components/Header/Header.module.scss';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { ToDoListPage } from './pages/ToDoListPage';
+import './assets/scss/normalize.scss';
+import './assets/scss/style.scss';
 
-export const Header = () => {
-    return (
-        <header className={classes.header}>
-            <div className={classes.container}>
-                <a href="/" className={classes.link}>ToDo</a>
-            </div>
-        </header>
-    );
-};
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <ToDoListPage />
+  </React.StrictMode>
+);
